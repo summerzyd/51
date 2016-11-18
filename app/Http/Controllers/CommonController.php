@@ -17,5 +17,6 @@ class CommonController extends Controller
     public function lineChart()
     {
         JpGraph::lineChart();
+        $this->validate();
     }
 }

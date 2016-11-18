@@ -23,7 +23,8 @@ $app = new Laravel\Lumen\Application(
 $app->withFacades();
 
 $app->register(Maatwebsite\Excel\ExcelServiceProvider::class);
-// $app->withEloquent();
+$app->withEloquent();
+$app->configure('error');
 
 /*
 |--------------------------------------------------------------------------
@@ -93,7 +94,6 @@ $app->singleton(
 | can respond to, as well as the controllers that may handle them.
 |
 */
-
 $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
     require __DIR__.'/../app/Http/routes.php';
 });

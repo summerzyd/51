@@ -21,3 +21,4 @@ $app->get($path.'site/is_login', 'SiteController@isLogin');
 $app->get($path.'site/captcha', 'SiteController@captcha');
 $app->get($path.'export/index', 'ExportController@index');
 $app->get($path.'common/line_chart', 'CommonController@lineChart');
+$app->post($path.'stat/zone', 'StatController@zone');
